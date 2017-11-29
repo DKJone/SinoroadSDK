@@ -9,14 +9,14 @@
 Pod::Spec.new do |s|
 
   s.name          = 'SinoroadSDK'
-  s.version       = '1.0.1'
+  s.version       = '0.0.1'
   s.summary       = 'Sinoroad ios sdk'
   s.homepage      = 'https://github.com/DKJone/SinoroadSDK'
   s.license       = { :type => 'Apache', :file => 'License' }
   s.author        = { 'DKJone' => 'zdk@sinoroad.com' }
   s.platform      = :ios, '8.0'
   s.source        = { :git => 'https://github.com/DKJone/SinoroadSDK/SinoroadSDK.git', :tag => s.version }
-  s.source_files  = 'Sources/**/*.{swift,m,h}'
+  s.source_files  = 'SinoroadSDK/Sources/**/*.{swift,m,h}'
 
   # 依赖项
   s.dependency 'Alamofire'
