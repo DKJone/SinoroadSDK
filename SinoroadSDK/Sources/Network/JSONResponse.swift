@@ -28,14 +28,14 @@ public struct JSONResponse {
 
     // FIXME: 返回的数据格式需要统一
     public var isSuccess: Bool {
-        return resultCode.uppercased() == "SUCCESS" || resultCode == "noData" || resultCode == "1"
+        return resultCode.uppercased() == "SUCCESS" || resultCode == "noData" || resultCode == "1000"
     }
 
     public init?(_ response: Response) {
         guard let json = JSON(response) else { return nil }
 
-        resultCode = json["state"].stringValue
-        result = json["data"]
+        resultCode = json["errorCode"].stringValue
+        result = json["obj"]
         errorMsg = json["message"].stringValue
     }
 }

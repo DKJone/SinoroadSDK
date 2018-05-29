@@ -26,7 +26,7 @@ public extension UIViewController {
         return self.isViewLoaded && view.window != nil
     }
 
-    public var navigationBar: UINavigationBar? {
+    public var navigatBar: UINavigationBar? {
         return navigationController?.navigationBar
     }
 }

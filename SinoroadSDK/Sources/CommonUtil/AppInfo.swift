@@ -100,6 +100,10 @@ extension AppInfo {
     public static var systemVersion: String {
         return UIDevice.current.systemVersion
     }
+    /// 当前app运行状态
+    public static var appState: UIApplicationState{
+        return UIApplication.shared.applicationState
+    }
 }
 
 extension AppInfo {

@@ -13,7 +13,7 @@ public final class EventBus {
     
     private struct Static {
         static let instance = EventBus()
-        static let queue = DispatchQueue(label: "com.milanosoft.sdk" + UUID().uuidString)
+        static let queue = DispatchQueue(label: "com.sinoroad.sdk" + UUID().uuidString)
     }
     
     private struct NamedObserver {

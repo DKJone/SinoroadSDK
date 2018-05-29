@@ -187,4 +187,11 @@ extension UIView {
     public func removeGestureRecognizers() {
         gestureRecognizers?.forEach(removeGestureRecognizer)
     }
+    
+    /// remove all autolayout Constraint
+    public func removeAllAutoLayout(){
+        self.removeConstraints(self.constraints)
+        guard let suV = self.superview else{return}
+        suV.removeConstraints(suV.constraints.filter{($0.firstItem as? UIView) == self})
+    }
 }

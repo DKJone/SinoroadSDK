@@ -71,8 +71,17 @@ extension UITableView {
     ///
     /// - Parameter animated: set true to animate scroll (default is true).
     public func scrollToBottom(animated: Bool = true) {
-        let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.size.height)
-        setContentOffset(bottomOffset, animated: animated)
+        //let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.size.height)
+        //setContentOffset(bottomOffset, animated: animated)
+        let section = numberOfSections - 1
+        if section >= 0 {
+            let row = numberOfRows(inSection: section) - 1
+            if row >= 0{
+                scrollToRow(at: IndexPath(row: row, section: section), at: .bottom, animated: animated)
+            }
+        }
+        
+       
     }
     
     /// Scroll to top of TableView.

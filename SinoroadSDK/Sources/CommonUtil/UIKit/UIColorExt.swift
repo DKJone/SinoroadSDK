@@ -73,13 +73,13 @@ extension UIColor {
     
     /// supported format: EDE7F6, 0xEDE7F6, #EDE7F6, #0ff, 0xF0F
     public convenience init(hexString: String, alpha: CGFloat = 1) {
-        var hex = hexString.hasPrefix("#") ? String(hexString.characters.dropFirst()) : hexString
+        var hex = hexString.hasPrefix("#") ? String(hexString.dropFirst()) : hexString
         
-        if !(hex.characters.count == 3 || hex.characters.count == 6) { // 格式非法，默认设为白色
+        if !(hex.count == 3 || hex.count == 6) { // 格式非法，默认设为白色
             self.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         } else {
-            if hex.characters.count == 3 {
-                for (index, char) in hex.characters.enumerated() {
+            if hex.count == 3 {
+                for (index, char) in hex.enumerated() {
                     hex.insert(char, at: hex.index(hex.startIndex, offsetBy: index * 2))
                 }
             }

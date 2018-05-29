@@ -42,13 +42,13 @@ extension String {
 // MARK: - 格式验证
 
 private let letterAndNumbersPattern = "^\\w+$"
-private let phonePattern = "^(13[0-9]|15[0-9]|17[0-9]|18[0-9])\\d{8}$"
+private let phonePattern = "^(13[0-9]|15[0-9]|17[0-9]|18[0-9]|19[0-9])\\d{8}$"
 private let idCardNum16Pattern = "^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$"
 private let idCardNum18Pattern = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$"
 
 extension String {
 
-    /// 手机号码验证，支持13、15、17、18开头的手机号码
+    /// 手机号码验证，支持13、15、17、18、19开头的手机号码
     ///
     /// - Returns: true表示号码合法
     public func isValidPhoneNumber() -> Bool {
@@ -78,7 +78,7 @@ extension String {
         CFStringTransform(str, nil, kCFStringTransformMandarinLatin, false)
         CFStringTransform(str, nil, kCFStringTransformStripDiacritics, false)
         let pinYin = str.capitalized
-        return pinYin.substring(to: pinYin.index(startIndex, offsetBy: 1))
+        return String(pinYin[pinYin.startIndex..<pinYin.index(startIndex, offsetBy: 1)])
     }
 }
 
