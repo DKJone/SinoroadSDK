@@ -101,7 +101,7 @@ extension AppInfo {
         return UIDevice.current.systemVersion
     }
     /// 当前app运行状态
-    public static var appState: UIApplicationState{
+    public static var appState: UIApplication.State{
         return UIApplication.shared.applicationState
     }
 }
@@ -127,7 +127,7 @@ extension AppInfo {
     public static func didTakeScreenShot(_ action: @escaping () -> ()) {
         // http://stackoverflow.com/questions/13484516/ios-detection-of-screenshot
         let mainQueue = OperationQueue.main
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil, queue: mainQueue) { notification in
+        NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification, object: nil, queue: mainQueue) { notification in
             action()
         }
     }

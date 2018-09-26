@@ -75,7 +75,7 @@ extension UIScrollView {
         cover.scrollView = self
 
         addSubview(cover)
-        sendSubview(toBack: cover)
+        sendSubviewToBack(cover)
 
         self.scalableCover = cover
         // self.contentInset = UIEdgeInsets(top: maxHeight, left: 0, bottom: 0, right: 0)

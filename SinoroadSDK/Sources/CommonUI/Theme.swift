@@ -18,13 +18,13 @@ public final class Theme {
     
     /// 配置App主题风格
     public static func configureAppearance() {
-        let navBarTitleTextAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16)]
+        let navBarTitleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
         UINavigationBar.appearance().titleTextAttributes = navBarTitleTextAttributes
         UINavigationBar.appearance().tintColor = navTintColor
         //        UINavigationBar.appearance().barTintColor = navBarTintColor
         //        UINavigationBar.appearance().isTranslucent = false
         
-        let barButtonItemTitleTextAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
+        let barButtonItemTitleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]
         UIBarButtonItem.appearance().setTitleTextAttributes(barButtonItemTitleTextAttributes, for: .normal)
         
         UITabBar.appearance().barTintColor = UIColor.white

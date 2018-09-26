@@ -60,7 +60,7 @@ public func openCameraSettings() {
 
 /// 打开当前APP的设置界面
 public func openAppPreferences() {
-    let url = URL(string: UIApplicationOpenSettingsURLString)!
+    let url = URL(string: UIApplication.openSettingsURLString)!
     if #available(iOS 10.0, *) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     } else {
@@ -72,7 +72,7 @@ public func openAppPreferences() {
 ///
 /// - Parameter sourceType: UIImagePickerController类型：photoLibrary或camera
 /// - Returns: 返回UIImagePickerController对象，nil表示没有相应的权限
-public func imagePicker(for sourceType: UIImagePickerControllerSourceType) -> UIImagePickerController? {
+public func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController? {
     let pickerController = UIImagePickerController()
     if sourceType == .photoLibrary {
         guard isPermitAccessPhotoLibrary() else {

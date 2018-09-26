@@ -61,11 +61,11 @@ extension UIScrollView {
 
     public func observerKeyboard() {
         // UITextField
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldBeginEditing(_:)), name: .UITextFieldTextDidBeginEditing, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldEndEditing(_:)), name: .UITextFieldTextDidEndEditing, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldBeginEditing(_:)), name: UITextField.textDidBeginEditingNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldEndEditing(_:)), name: UITextField.textDidEndEditingNotification, object: nil)
         // UIKeyboard
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     public func removeObserver() {
@@ -83,7 +83,7 @@ extension UIScrollView {
     @objc func keyboardWillShow(_ notification: NSNotification) {
         guard let firstResponder = currentResponder else { return }
 
-        let keyboardFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue // swiftlint:disable:this force_cast
+        let keyboardFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue // swiftlint:disable:this force_cast
         let keyboardHeight = keyboardFrame.height
         let firstResponderY = firstResponder.convert(firstResponder.frame, to: window).maxY
         let offsetY = keyboardHeight - (screenSize.height - firstResponderY)
@@ -138,8 +138,8 @@ public class KeyboardToolbar: UIView {
         super.init(frame: frame)
         initViews()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldBeginEditing(_:)), name: .UITextFieldTextDidBeginEditing, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldEndEditing(_:)), name: .UITextFieldTextDidEndEditing, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldBeginEditing(_:)), name: UITextField.textDidBeginEditingNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldEndEditing(_:)), name: UITextField.textDidEndEditingNotification, object: nil)
     }
 
     public required init?(coder _: NSCoder) {

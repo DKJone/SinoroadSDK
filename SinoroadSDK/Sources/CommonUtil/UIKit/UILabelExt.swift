@@ -29,7 +29,7 @@ extension UILabel {
         guard let text = text else { return .zero }
         
         let size = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.leastNormalMagnitude)
-        let attributes = [NSAttributedStringKey.font: font] as [NSAttributedStringKey: Any]
+        let attributes = [NSAttributedString.Key.font: font] as [NSAttributedString.Key: Any]
         
         return NSString(string: text).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil).size
     }

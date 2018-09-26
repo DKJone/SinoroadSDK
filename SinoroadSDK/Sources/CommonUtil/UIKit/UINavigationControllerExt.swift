@@ -43,7 +43,7 @@ public extension UINavigationController {
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = true
         navigationBar.tintColor = tintColor
-        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: tintColor]
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintColor]
     }
 }
 
@@ -56,9 +56,9 @@ public extension UINavigationBar {
     ///   - font: title font
     ///   - color: title text color (default is .black).
     public func setTitleFont(_ font: UIFont, color: UIColor = UIColor.black) {
-        var attrs = [NSAttributedStringKey: AnyObject]()
-        attrs[NSAttributedStringKey.font] = font
-        attrs[NSAttributedStringKey.foregroundColor] = color
+        var attrs = [NSAttributedString.Key: AnyObject]()
+        attrs[NSAttributedString.Key.font] = font
+        attrs[NSAttributedString.Key.foregroundColor] = color
         self.titleTextAttributes = attrs
     }
     
@@ -70,7 +70,7 @@ public extension UINavigationBar {
         self.shadowImage = UIImage()
         self.isTranslucent = true
         self.tintColor = tintColor
-        self.titleTextAttributes = [NSAttributedStringKey.foregroundColor: tintColor]
+        self.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintColor]
     }
     
     /// SwifterSwift: Set navigationBar background and text colors
@@ -84,7 +84,7 @@ public extension UINavigationBar {
         self.barTintColor = background
         self.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.tintColor = text
-        self.titleTextAttributes = [NSAttributedStringKey.foregroundColor: text]
+        self.titleTextAttributes = [NSAttributedString.Key.foregroundColor: text]
     }
 }
 

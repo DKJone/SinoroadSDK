@@ -66,7 +66,7 @@ extension UIAlertController {
     ///   - handler: optional action handler to be called when button is tapped (default is nil)
     /// - Returns: action created by this method
     @discardableResult
-    public func addAction(title: String? = nil, style: UIAlertActionStyle = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+    public func addAction(title: String? = nil, style: UIAlertAction.Style = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
         let action = UIAlertAction(title: title, style: style, handler: handler)
         action.isEnabled = isEnabled
         addAction(action)

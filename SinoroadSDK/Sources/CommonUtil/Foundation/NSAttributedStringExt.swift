@@ -16,22 +16,22 @@ extension NSAttributedString {
     
     /// 粗体
     public var bolded: NSAttributedString {
-        return apply(attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)])
+        return apply(attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)])
     }
     
     /// 下划线
     public var underlined: NSAttributedString {
-        return apply(attributes: [NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+        return apply(attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
     }
     
     /// 斜体
     public var italicized: NSAttributedString {
-        return apply(attributes: [NSAttributedStringKey.font: UIFont.italicSystemFont(ofSize: UIFont.systemFontSize)])
+        return apply(attributes: [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: UIFont.systemFontSize)])
     }
     
     /// 删除线
     public var strikethrough: NSAttributedString {
-        return apply(attributes: [NSAttributedStringKey.strikethroughStyle: NSUnderlineStyle.styleSingle.rawValue])
+        return apply(attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue])
     }
 }
 
@@ -42,7 +42,7 @@ extension NSAttributedString {
     ///
     /// - Parameter attributes: Dictionary of attributes
     /// - Returns: NSAttributedString with applied attributes
-    fileprivate func apply(attributes: [NSAttributedStringKey: Any]) -> NSAttributedString {
+    fileprivate func apply(attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
         let copy = NSMutableAttributedString(attributedString: self)
         let range = (self.string as NSString).range(of: self.string)
         copy.addAttributes(attributes, range: range)
@@ -55,6 +55,6 @@ extension NSAttributedString {
     /// - Parameter color: text color.
     /// - Returns: a NSAttributedString colored with given color.
     public func colored(with color: UIColor) -> NSAttributedString {
-        return apply(attributes: [NSAttributedStringKey.foregroundColor: color])
+        return apply(attributes: [NSAttributedString.Key.foregroundColor: color])
     }
 }
