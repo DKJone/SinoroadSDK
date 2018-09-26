@@ -72,7 +72,7 @@ public final class SSRouter {
         schemes.append(contentsOf: [SSRouter.appScheme, SSRouter.httpScheme, SSRouter.httpsScheme])
     }
     
-    public func map(_ url: String, handler: RouteHandler) {
+    public func map(_ url: String, handler:@escaping RouteHandler) {
         let dict = parse(url)
         dict.setValue(handler, forKey: SSRouter.kRouteTarget)
     }

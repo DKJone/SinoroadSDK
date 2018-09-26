@@ -56,8 +56,6 @@
 		110E1E3A1FCE61A400DB7B87 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1DFE1FCE61A400DB7B87 /* EventBus.swift */; };
 		110E1E3E1FCE61A400DB7B87 /* LimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E041FCE61A400DB7B87 /* LimitTextField.swift */; };
 		110E1E3F1FCE61A400DB7B87 /* QRScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E051FCE61A400DB7B87 /* QRScanView.swift */; };
-		110E1E401FCE61A400DB7B87 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E061FCE61A400DB7B87 /* PaddingTextField.swift */; };
-		110E1E411FCE61A400DB7B87 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E071FCE61A400DB7B87 /* PasswordView.swift */; };
 		110E1E421FCE61A400DB7B87 /* UINavigationBar+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E081FCE61A400DB7B87 /* UINavigationBar+Alpha.swift */; };
 		110E1E431FCE61A400DB7B87 /* UIScrollView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E091FCE61A400DB7B87 /* UIScrollView+Keyboard.swift */; };
 		110E1E441FCE61A400DB7B87 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E0A1FCE61A400DB7B87 /* Theme.swift */; };
@@ -119,8 +117,6 @@
 		110E1DFE1FCE61A400DB7B87 /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
 		110E1E041FCE61A400DB7B87 /* LimitTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitTextField.swift; sourceTree = "<group>"; };
 		110E1E051FCE61A400DB7B87 /* QRScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanView.swift; sourceTree = "<group>"; };
-		110E1E061FCE61A400DB7B87 /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
-		110E1E071FCE61A400DB7B87 /* PasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		110E1E081FCE61A400DB7B87 /* UINavigationBar+Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Alpha.swift"; sourceTree = "<group>"; };
 		110E1E091FCE61A400DB7B87 /* UIScrollView+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Keyboard.swift"; sourceTree = "<group>"; };
 		110E1E0A1FCE61A400DB7B87 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -290,8 +286,6 @@
 			children = (
 				110E1E041FCE61A400DB7B87 /* LimitTextField.swift */,
 				110E1E051FCE61A400DB7B87 /* QRScanView.swift */,
-				110E1E061FCE61A400DB7B87 /* PaddingTextField.swift */,
-				110E1E071FCE61A400DB7B87 /* PasswordView.swift */,
 				110E1E081FCE61A400DB7B87 /* UINavigationBar+Alpha.swift */,
 				110E1E091FCE61A400DB7B87 /* UIScrollView+Keyboard.swift */,
 				110E1E0A1FCE61A400DB7B87 /* Theme.swift */,
@@ -445,7 +439,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				110E1E311FCE61A400DB7B87 /* UIImageViewExt.swift in Sources */,
-				110E1E411FCE61A400DB7B87 /* PasswordView.swift in Sources */,
 				110E1E3A1FCE61A400DB7B87 /* EventBus.swift in Sources */,
 				110E1E351FCE61A400DB7B87 /* StringExt.swift in Sources */,
 				110E1E151FCE61A400DB7B87 /* Filter.swift in Sources */,
@@ -464,7 +457,6 @@
 				110E1E421FCE61A400DB7B87 /* UINavigationBar+Alpha.swift in Sources */,
 				110E1E171FCE61A400DB7B87 /* ConsoleDestination.swift in Sources */,
 				110E1E291FCE61A400DB7B87 /* UIViewExt.swift in Sources */,
-				110E1E401FCE61A400DB7B87 /* PaddingTextField.swift in Sources */,
 				110E1E1E1FCE61A400DB7B87 /* Provider+Promise.swift in Sources */,
 				110E1E111FCE61A400DB7B87 /* SSRouter.swift in Sources */,
 				110E1E1A1FCE61A400DB7B87 /* FilterParamsTranslationPlugin.swift in Sources */,

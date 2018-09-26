@@ -31,7 +31,7 @@ public class AppInfo {
     }
     
     // App Build Number
-    public static var appBuild: String! {
+    public static var appBuild: String {
         return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String // swiftlint:disable:this force_cast
     }
 }

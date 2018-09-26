@@ -15,6 +15,7 @@ public class CountdownButton: UIButton {
     /// 倒计时时间
     public var seconds = 0
     public var bgColor : UIColor!
+    /// 倒计时时间格式（根据秒数返回字符串）
     public var titleStyle : ((Int)->String)!
     public var unUseColor:UIColor!
     private let timerIdentifier = "timer.CountdownButton"
