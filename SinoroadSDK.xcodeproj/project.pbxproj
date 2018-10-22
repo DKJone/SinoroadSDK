@@ -61,6 +61,7 @@
 		110E1E441FCE61A400DB7B87 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E0A1FCE61A400DB7B87 /* Theme.swift */; };
 		110E1E451FCE61A400DB7B87 /* UIScrollView+ScalableCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E0B1FCE61A400DB7B87 /* UIScrollView+ScalableCover.swift */; };
 		110E1E461FCE61A400DB7B87 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1E0C1FCE61A400DB7B87 /* CountdownButton.swift */; };
+		1119B8C9217DBA570063E623 /* DKJoneEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119B8C8217DBA570063E623 /* DKJoneEXT.swift */; };
 		4248644FE92705849E4A3100 /* Pods_SinoroadSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B170A6767F4BCA304CFAED1 /* Pods_SinoroadSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,7 @@
 		110E1E0C1FCE61A400DB7B87 /* CountdownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
 		110E1E101FCE61A400DB7B87 /* SinoroadSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinoroadSDK.h; sourceTree = "<group>"; };
 		110E1E7D1FCE8A0B00DB7B87 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1119B8C8217DBA570063E623 /* DKJoneEXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKJoneEXT.swift; sourceTree = "<group>"; };
 		4B3DE3D9E7B7BB0A6239B16D /* Pods-SinoroadSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinoroadSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinoroadSDK/Pods-SinoroadSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		9B170A6767F4BCA304CFAED1 /* Pods_SinoroadSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinoroadSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45FA237A5AEBFD4AAA32D14 /* Pods-SinoroadSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinoroadSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinoroadSDK/Pods-SinoroadSDK.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		110E1DE01FCE61A400DB7B87 /* CommonUtil */ = {
 			isa = PBXGroup;
 			children = (
+				1119B8C8217DBA570063E623 /* DKJoneEXT.swift */,
 				110E1DE11FCE61A400DB7B87 /* FP.swift */,
 				110E1DE21FCE61A400DB7B87 /* AddressUtils.swift */,
 				110E1DE31FCE61A400DB7B87 /* Core */,
@@ -472,6 +475,7 @@
 				110E1E201FCE61A400DB7B87 /* JSONResponse.swift in Sources */,
 				110E1E1C1FCE61A400DB7B87 /* APIProvider.swift in Sources */,
 				110E1E2A1FCE61A400DB7B87 /* Reusable.swift in Sources */,
+				1119B8C9217DBA570063E623 /* DKJoneEXT.swift in Sources */,
 				110E1E331FCE61A400DB7B87 /* NSCoderExt.swift in Sources */,
 				110E1E241FCE61A400DB7B87 /* HUDExt.swift in Sources */,
 				110E1E2C1FCE61A400DB7B87 /* UICollectionViewExt.swift in Sources */,
