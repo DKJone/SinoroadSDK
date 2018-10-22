@@ -112,7 +112,7 @@ class DKJoneView: UIView, CAAnimationDelegate {
     }
 
     func setupLayers() {
-        self.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0)
+        self.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 0.0)
 
         let dkPath = CAShapeLayer()
         dkPath.frame = CGRect(x: 34.26, y: 266.31, width: 306.48, height: 134.37)
