@@ -1,23 +1,23 @@
 PODS:
-  - Alamofire (4.7.2)
+  - Alamofire (4.8.2)
   - MBProgressHUD (1.1.0)
-  - Moya (11.0.2):
-    - Moya/Core (= 11.0.2)
-  - Moya/Core (11.0.2):
+  - Moya (13.0.0):
+    - Moya/Core (= 13.0.0)
+  - Moya/Core (13.0.0):
     - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - PromiseKit (6.2.8):
-    - PromiseKit/CorePromise (= 6.2.8)
-    - PromiseKit/Foundation (= 6.2.8)
-    - PromiseKit/UIKit (= 6.2.8)
-  - PromiseKit/CorePromise (6.2.8)
-  - PromiseKit/Foundation (6.2.8):
+    - Result (~> 4.1)
+  - PromiseKit (6.8.4):
+    - PromiseKit/CorePromise (= 6.8.4)
+    - PromiseKit/Foundation (= 6.8.4)
+    - PromiseKit/UIKit (= 6.8.4)
+  - PromiseKit/CorePromise (6.8.4)
+  - PromiseKit/Foundation (6.8.4):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.2.8):
+  - PromiseKit/UIKit (6.8.4):
     - PromiseKit/CorePromise
-  - Result (3.2.4)
-  - SnapKit (4.0.0)
-  - SwiftyJSON (4.1.0)
+  - Result (4.1.0)
+  - SnapKit (5.0.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -38,14 +38,14 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  Moya: a725035953bc1c0eb1be505ab903984501d82440
-  PromiseKit: 6788ce1a0ed5448b83d4aaf56b9fc49fb7647d32
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  Moya: 161263550064ff8a4948e8ff63137fd72a876292
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: f5f282060bd1a97051ab3f92ec0ef2018c8dae4b
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.1

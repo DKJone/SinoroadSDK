@@ -86,6 +86,7 @@ extension String {
 private let dateFormatter = DateFormatter()
 
 extension Date {
+    public static let resDate = Date.date(from: "2000", format: "yyyy")!
 
     /// 从日期字符串创建Date对象
     ///

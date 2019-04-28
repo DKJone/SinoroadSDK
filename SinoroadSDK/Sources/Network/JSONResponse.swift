@@ -34,8 +34,8 @@ public struct JSONResponse {
     public init?(_ response: Response) {
         guard let json = JSON(response) else { return nil }
 
-        resultCode = json["errorCode"].stringValue
-        result = json["obj"]
-        errorMsg = json["message"].stringValue
+        resultCode = json["code"].stringValue
+        result = json["data"]
+        errorMsg = json["error"].stringValue
     }
 }

@@ -52,10 +52,8 @@ public func isPermitAccessAddressBook() -> Bool {
 /// 打开相机设置界面
 public func openCameraSettings() {
     if #available(iOS 10, *) {
-        UIApplication.shared.open(URL(string: "App-Prefs:root=Privacy&path=CAMERA")!, options: [:], completionHandler: nil)
-    } else {
-        UIApplication.shared.openURL(URL(string: "prefs:root=Privacy&path=CAMERA")!)
-    }
+        UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+    } 
 }
 
 /// 打开当前APP的设置界面

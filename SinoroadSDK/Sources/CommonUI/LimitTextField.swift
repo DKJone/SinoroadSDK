@@ -31,13 +31,13 @@ public class LimitTextField: UITextField, UITextFieldDelegate {
     @objc func textFieldTextDidChange() {
         guard let text = self.text else { return }
 
-        if text.characters.count > maxLength {
+        if text.count > maxLength {
             self.text = text.substring(to: text.index(text.startIndex, offsetBy: maxLength))
         }
     }
 
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if self.text!.characters.count == maxLength && string != "" {
+        if self.text!.count == maxLength && string != "" {
             return false
         }
         return textFieldDelegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: string) ?? true
