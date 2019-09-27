@@ -22,10 +22,10 @@ public extension UIImage {
         return self.bytesSize / 1024
     }
 
-    /// UIImage with .alwaysOriginal rendering mode.
-    public var original: UIImage {
-        return withRenderingMode(.alwaysOriginal)
-    }
+//    /// UIImage with .alwaysOriginal rendering mode.
+//    public var original: UIImage {
+//        return withRenderingMode(.alwaysOriginal)
+//    }
 
     /// UIImage with .alwaysTemplate rendering mode.
     public var template: UIImage {
@@ -37,14 +37,14 @@ public extension UIImage {
     /// - Parameters:
     ///   - color: image fill color.
     ///   - size: image size.
-    public convenience init(color: UIColor, size: CGSize) {
-        UIGraphicsBeginImageContextWithOptions(size, false, 1)
-        color.setFill()
-        UIRectFill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let image = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        self.init(cgImage: image.cgImage!)
-    }
+//    public convenience init(color: UIColor, size: CGSize) {
+//        UIGraphicsBeginImageContextWithOptions(size, false, 1)
+//        color.setFill()
+//        UIRectFill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
+//        let image = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
+//        self.init(cgImage: image.cgImage!)
+//    }
 }
 
 // MARK: - Methods

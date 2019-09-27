@@ -9,13 +9,13 @@
 import UIKit
 
 // MARK: - UINavigationBar+Alpha
+
 extension UINavigationBar {
-    
     private struct AssociatedKeys {
         static var kScrollView = "scrollView"
         static var kBarColor = "barColor"
     }
-    
+
     public var barColor: UIColor? {
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.kBarColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -24,7 +24,7 @@ extension UINavigationBar {
             return objc_getAssociatedObject(self, &AssociatedKeys.kBarColor) as? UIColor
         }
     }
-    
+
     private var scrollView: UIScrollView? {
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.kScrollView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -33,17 +33,24 @@ extension UINavigationBar {
             return objc_getAssociatedObject(self, &AssociatedKeys.kScrollView) as? UIScrollView
         }
     }
-    
+
     private var distance: CGFloat {
-        return scrollView!.contentInset.top
+        return self.scrollView!.contentInset.top
     }
-    
+
     private func updateAlpha(_ alpha: CGFloat = 0.0) {
         let color = (barColor ?? tintColor).withAlphaComponent(alpha)
-        let backgroundImage = UIImage(color: color, size: CGSize(width: 1, height: 1))
+
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), false, 1)
+        color.setFill()
+        UIRectFill(CGRect(x: 0, y: 0, width: 1, height: 1))
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        let backgroundImage = UIImage(cgImage: image.cgImage!)
         setBackgroundImage(backgroundImage, for: .default)
     }
-    
+
     /// 添加至指定的UIScrollView
     ///
     /// - Parameter scrollView: 指定的UIScrollView
@@ -55,7 +62,7 @@ extension UINavigationBar {
         self.isTranslucent = true
         scrollView.addObserver(self, forKeyPath: kContentOffset, options: .new, context: nil)
     }
-    
+
     /// 重置
     public func reset() {
         self.scrollView?.removeObserver(self, forKeyPath: kContentOffset)
@@ -67,16 +74,16 @@ extension UINavigationBar {
         self.isTranslucent = false
         // self.setBackgroundImage(nil, for: .default)
     }
-    
+
     open override func observeValue(forKeyPath _: String?, of _: Any?, change _: [NSKeyValueChangeKey: Any]?, context _: UnsafeMutableRawPointer?) {
         guard let scrollView = scrollView else { return }
-        
+
         let offsetY = scrollView.contentOffset.y
-        if offsetY > -distance {
-            let alpha = min(1, 1 - ((-distance + 120 - offsetY) / 64))
-            updateAlpha(alpha)
+        if offsetY > -self.distance {
+            let alpha = min(1, 1 - ((-self.distance + 120 - offsetY) / 64))
+            self.updateAlpha(alpha)
         } else {
-            updateAlpha(0)
+            self.updateAlpha(0)
         }
     }
 }
