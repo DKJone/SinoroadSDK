@@ -12,22 +12,6 @@ import AudioToolbox
 // MARK: - Methods
 extension UIAlertController {
     
-    /// Create new alert view controller with default OK action.
-    ///
-    /// - Parameters:
-    ///   - title: alert controller's title.
-    ///   - message: alert controller's message (default is nil).
-    ///   - defaultActionButtonTitle: default action button title (default is "OK")
-    ///   - tintColor: alert controller's tint color (default is nil)
-    public convenience init(title: String, message: String? = nil, defaultActionButtonTitle: String = "确定", tintColor: UIColor? = nil) {
-        self.init(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: defaultActionButtonTitle, style: .default, handler: nil)
-        addAction(defaultAction)
-        if let color = tintColor {
-            view.tintColor = color
-        }
-    }
-    
     /// Create new error alert view controller from Error with default OK action.
     ///
     /// - Parameters:
