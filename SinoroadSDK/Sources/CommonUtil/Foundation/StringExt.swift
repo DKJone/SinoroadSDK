@@ -12,20 +12,6 @@ import Foundation
 
 extension String {
 
-    /// md5
-//    public var md5: String {
-//         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
-//         var digest = [UInt8](repeating: 0, count: digestLen)
-//        
-//         if let data = self.data(using: .utf8) {
-//             _ = data.withUnsafeBytes { CC_MD5($0, CC_LONG(data.count), &digest) }
-//         }
-//        
-//         return (0..<digestLen).reduce("") { $0 + String(format: "%02x", digest[$1]) }
-
-//        return CryptoUtil.md5(self)
-//    }
-
     public var base64Encoded: String {
         let data = self.data(using: .utf8, allowLossyConversion: true)!
         return data.base64EncodedString()
@@ -47,8 +33,7 @@ private let idCardNum16Pattern = "^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0
 private let idCardNum18Pattern = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$"
 
 extension String {
-
-    /// 手机号码验证，支持13、15、17、18、19开头的手机号码
+    /// 手机号码验证，支持13-9开头的手机号码
     ///
     /// - Returns: true表示号码合法
     public func isValidPhoneNumber() -> Bool {
@@ -117,11 +102,10 @@ extension Date {
     }
 }
 
-extension String{
-    //移除小数点后结尾多余0和小数点
-    public var removeEndZero:String{
-        let tempStr = replacingOccurrences(of: "[0]+$", with: "", options: [.regularExpression,.caseInsensitive])
-        return tempStr.replacingOccurrences(of: "[.]$", with: "",options: [.regularExpression,.caseInsensitive])
-        
+extension String {
+    // 移除小数点后结尾多余0和小数点
+    public var removeEndZero: String {
+        let tempStr = replacingOccurrences(of: "[0]+$", with: "", options: [.regularExpression, .caseInsensitive])
+        return tempStr.replacingOccurrences(of: "[.]$", with: "", options: [.regularExpression, .caseInsensitive])
     }
 }

@@ -19,92 +19,7 @@ extension UIView {
         return self.bounds.size.height
     }
 }
-//
-//// MARK: - Inspectable
-//extension UIView {
-//    
-//    /// The color of the layer’s border.
-//    @IBInspectable
-//    public var borderColor: UIColor? {
-//        get {
-//            return layer.borderColor?.uiColor
-//        }
-//        set {
-//            guard let color = newValue else {
-//                layer.borderColor = nil
-//                return
-//            }
-//            layer.borderColor = color.cgColor
-//        }
-//    }
-//    
-//    /// The width of the layer’s border.
-//    @IBInspectable
-//    public var borderWidth: CGFloat {
-//        get {
-//            return layer.borderWidth
-//        }
-//        set {
-//            layer.borderWidth = newValue
-//        }
-//    }
-//    
-//    /// The radius to use when drawing rounded corners for the layer’s background.
-//    @IBInspectable
-//    public var cornerRadius: CGFloat {
-//        get {
-//            return layer.cornerRadius
-//        }
-//        set {
-//            layer.masksToBounds = true
-//            layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
-//        }
-//    }
-//    
-//    /// The color of the layer’s shadow.
-//    @IBInspectable
-//    public var shadowColor: UIColor? {
-//        get {
-//            return layer.shadowColor?.uiColor
-//        }
-//        set {
-//            layer.shadowColor = newValue?.cgColor
-//        }
-//    }
-//    
-//    /// The offset (in points) of the layer’s shadow.
-//    @IBInspectable
-//    public var shadowOffset: CGSize {
-//        get {
-//            return layer.shadowOffset
-//        }
-//        set {
-//            layer.shadowOffset = newValue
-//        }
-//    }
-//    
-//    /// The opacity of the layer’s shadow.
-//    @IBInspectable
-//    public var shadowOpacity: Float {
-//        get {
-//            return layer.shadowOpacity
-//        }
-//        set {
-//            layer.shadowOpacity = newValue
-//        }
-//    }
-//    
-//    /// The blur radius (in points) used to render the layer’s shadow.
-//    @IBInspectable
-//    public var shadowRadius: CGFloat {
-//        get {
-//            return layer.shadowRadius
-//        }
-//        set {
-//            layer.shadowRadius = newValue
-//        }
-//    }
-//}
+
 
 // MARK: - Util
 extension UIView {
@@ -174,24 +89,5 @@ extension UIView {
         layer.masksToBounds = true
     }
     
-//    public func addSubviews(_ subviews: [UIView]) {
-//        subviews.forEach({ self.addSubview($0) })
-//    }
-    
-    /// Remove all subviews.
-    public func removeSubviews() {
-        subviews.forEach({ $0.removeFromSuperview() })
-    }
-    
-    /// Remove all gesture recognizers.
-    public func removeGestureRecognizers() {
-        gestureRecognizers?.forEach(removeGestureRecognizer)
-    }
-    
-    /// remove all autolayout Constraint
-    public func removeAllAutoLayout(){
-        self.removeConstraints(self.constraints)
-        guard let suV = self.superview else{return}
-        suV.removeConstraints(suV.constraints.filter{($0.firstItem as? UIView) == self})
-    }
+
 }
